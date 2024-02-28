@@ -7,7 +7,8 @@ import {ButtonComponentProps} from "./ButtonComponent.types"
 export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButton,children}) => {
     return (
         <>
-            {mode === 'light' && <Button onClick={handleButton} variant="primary" size="sm">{children}</Button> }
-            {mode === 'fullwidth' && <Button onClick={handleButton} variant="primary" size="lg">{children}</Button>}
+            {mode === 'primary' && <Button onClick={handleButton} variant="outline-primary">{children}</Button> }
+            {mode === 'light' && <Button onClick={handleButton} variant="outline-light">{children}</Button>}
+            {mode === 'danger' && <Button onClick={handleButton} variant="outline-danger">{children}</Button>}
         </>)
 }
