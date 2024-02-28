@@ -10,6 +10,8 @@ interface ButtonComponentProps  {
 
 export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButton,children}) => {
     return (
-        <Button onClick={handleButton} variant="primary" size="lg">{children}</Button>
-        )
+        <>
+            {mode === 'light' && <Button onClick={handleButton} variant="primary">{children}</Button> }
+            {mode === 'fullwidth' && <Button onClick={handleButton} variant="primary" size="lg">{children}</Button>}
+        </>)
 }
