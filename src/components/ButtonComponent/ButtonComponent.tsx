@@ -9,6 +9,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButt
         <>
             {mode === 'primary' && <Button onClick={handleButton} variant="outline-primary">{children}</Button> }
             {mode === 'light' && <Button onClick={handleButton} variant="outline-light">{children}</Button>}
+            {mode === 'success' && <Button variant="outline-success">{children}</Button>}
             {mode === 'danger' && <Button onClick={handleButton} variant="outline-danger">{children}</Button>}
         </>)
 }
