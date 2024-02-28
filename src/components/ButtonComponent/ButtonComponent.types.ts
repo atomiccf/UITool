@@ -4,5 +4,5 @@ export interface ButtonComponentProps  {
     mode?: string
     handleButton?: () => void
     children?: string | React.ReactNode
-    size?:string
+    size?: "sm" | "lg" | undefined
 }
