@@ -5,14 +5,12 @@ interface ButtonComponentProps  {
     type: string
     label: string;
     handleButton?: () => void
-    variant?:string
-
 }
 
 export const ButtonComponent: React.FC<ButtonComponentProps> = ({type,handleButton, label}) => {
     return (
         <>
-            {type === 'light' &&  <Button onClick={handleButton} variant="light">{label}</Button> }
-            {type === 'fullwidth' && <Button onClick={handleButton} variant="primary" size="lg"></Button>}
+            {type === 'light' && <Button onClick={handleButton} variant="primary">{label}</Button> }
+            {type === 'fullwidth' && <Button onClick={handleButton} variant="primary" size="lg">{label}</Button>}
         </>)
 }

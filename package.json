@@ -37,6 +37,10 @@
     "bootstrap": "^5.3.3",
     "react-bootstrap": "^2.10.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomiccf/UITool.git"
+  },
   "dependencies": {
     "react-bootstrap": "^2.10.1"
   }
