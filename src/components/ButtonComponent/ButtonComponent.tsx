@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {ButtonComponentProps} from "./ButtonComponent.types"
 
 
-export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButton,children}) => {
+export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButton,children,size}) => {
     return (
         <>
             {mode === 'primary' && <Button onClick={handleButton} variant="primary">{children}</Button> }
