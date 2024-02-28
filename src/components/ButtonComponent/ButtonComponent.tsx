@@ -3,7 +3,6 @@ import {Button} from "react-bootstrap";
 
 interface ButtonComponentProps  {
     mode?: string
-    label: string;
     handleButton?: () => void
     children?: string | React.ReactNode
 }
