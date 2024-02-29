@@ -7,10 +7,12 @@ export const CheckBoxComponent:React.FC<CheckBoxComponentProps> = ({labelText}) 
     return(
         <>
             <Form>
-                <Form.Check
-                    label={labelText}
-                />
+                <div className="mb-3">
+                    <Form.Check
+                        label={labelText}
+                    />
+                </div>
             </Form>
         </>
-       )
+)
 }
