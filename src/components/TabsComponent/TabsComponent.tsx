@@ -4,7 +4,6 @@ import Tabs from 'react-bootstrap/Tabs';
 import {TabComponentProps} from "./TabsComponent.types";
 
 export const TabsComponent:React.FC<TabComponentProps> = ({tabsList,handleSelect}) => {
-
     return(
         <Tabs
         id="controlled-tab-example"

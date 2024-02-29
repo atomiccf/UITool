@@ -4,12 +4,11 @@ import {CheckBoxComponentProps} from "./CheckBoxComponent.types";
 
 
 export const CheckBoxComponent:React.FC<CheckBoxComponentProps> = ({labelText}) => {
-
     return(
-        <Form.Check
-          label={labelText}
-        />
-
-    )
-
+        <Form>
+            <Form.Check
+                label={labelText}
+            />
+        </Form>
+      )
 }
