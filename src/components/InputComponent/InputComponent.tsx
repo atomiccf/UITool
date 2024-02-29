@@ -8,7 +8,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
         <>
         {mode === 'login' &&
             <Form.Group as={Row} className="mb-3" controlId="login">
-            <Form.Label htmlFor={"login"} column sm="2">Login</Form.Label>
+            <Form.Label column sm="2">Login</Form.Label>
                 <Col sm="10">
                     <Form.Control type="text" placeholder="Enter login name" />
                 </Col>
@@ -16,7 +16,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
             }
         {mode === 'password' &&
             <Form.Group as={Row} className="mb-3" controlId="password">
-            <Form.Label htmlFor={"password"} column sm="2">Password</Form.Label>
+            <Form.Label  column sm="2">Password</Form.Label>
                 <Col sm="10">
             <Form.Control type="password" placeholder="Enter password" />
                 </Col>
@@ -37,7 +37,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
         }
         {mode === 'text' &&
             <Form.Group as={Row} className="mb-3" >
-            <Form.Label htmlFor={"password"} column sm="2">{labelText}</Form.Label>
+            <Form.Label column sm="2">{labelText}</Form.Label>
                 <Col sm="10">
             <Form.Control type="text" />
                 </Col>
