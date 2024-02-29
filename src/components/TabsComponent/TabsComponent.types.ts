@@ -1,7 +1,12 @@
 import {ReactNode} from "react";
 
 export interface TabComponentProps {
-    tabsList:string[]
+    tabsList:tabListObject[]
     handleSelect?: () => void
-    children?: string | ReactNode
+    children?: ReactNode
+}
+
+interface tabListObject {
+    title:string,
+    component: ReactNode
 }
