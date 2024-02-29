@@ -5,9 +5,12 @@ import {CheckBoxComponentProps} from "./CheckBoxComponent.types";
 
 export const CheckBoxComponent:React.FC<CheckBoxComponentProps> = ({labelText}) => {
     return(
-        <>
-                <Form.Check.Input />
-                <Form.Check.Label>{labelText}</Form.Check.Label>
-        </>
+        <Form>
+             <div  className="mb-3">
+                    <Form.Check // prettier-ignore
+                    label={labelText}
+                    />
+             </div>
+        </Form>
 )
 }
