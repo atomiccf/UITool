@@ -11,7 +11,7 @@ export const TabsComponent:React.FC<TabComponentProps> = ({tabsList,handleSelect
         onSelect={handleSelect}
         className="mb-3"
         >
-        {tabsList.map((item) => (<Tab eventKey={item.title} title={item.title}>{item.component}</Tab>))}
+        {tabsList.map((item) => (<Tab key={item.title} eventKey={item.title} title={item.title}>{item.component}</Tab>))}
         </Tabs>
     )
 

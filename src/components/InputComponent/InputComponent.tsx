@@ -2,13 +2,15 @@ import React from "react";
 import Form from 'react-bootstrap/Form';
 import {InputComponentProps} from "./InputComponent.types";
 import {Col, Row} from "react-bootstrap";
+import {useId} from "react";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) => {
+    const id = useId()
     return(
         <>
         {mode === 'login' &&
             <Form.Group as={Row} className="mb-3" controlId="login">
-            <Form.Label column sm="2">Login</Form.Label>
+            <Form.Label htmlFor={"login"} column sm="2">Login</Form.Label>
                 <Col sm="10">
                     <Form.Control type="text" placeholder="Enter login name" />
                 </Col>
@@ -16,7 +18,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
             }
         {mode === 'password' &&
             <Form.Group as={Row} className="mb-3" controlId="password">
-            <Form.Label  column sm="2">Password</Form.Label>
+            <Form.Label htmlFor={"password"} column sm="2">Password</Form.Label>
                 <Col sm="10">
             <Form.Control type="password" placeholder="Enter password" />
                 </Col>
@@ -24,7 +26,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
         }
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
-            <Form.Label htmlFor={"password"} column sm="2">Email</Form.Label>
+            <Form.Label htmlFor={"email"} column sm="2">Email</Form.Label>
                 <Col sm="10">
             <Form.Control type="email" placeholder="Enter email" />
                 </Col>
@@ -36,8 +38,8 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
              </Form.Group>
         }
         {mode === 'text' &&
-            <Form.Group as={Row} className="mb-3" >
-            <Form.Label column sm="2">{labelText}</Form.Label>
+            <Form.Group controlId={id} as={Row} className="mb-3" >
+            <Form.Label htmlFor={id} column sm="2">{labelText}</Form.Label>
                 <Col sm="10">
             <Form.Control type="text" />
                 </Col>
