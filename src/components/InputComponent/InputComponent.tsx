@@ -1,7 +1,7 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
 import {InputComponentProps} from "./InputComponent.types";
-import {Button, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) => {
     return(
@@ -33,8 +33,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
         {mode === 'search' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
              <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-            </Form.Group>
+             </Form.Group>
         }
         {mode === 'text' &&
             <Form.Group as={Row} className="mb-3" >
