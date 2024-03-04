@@ -9,10 +9,10 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
     return(
         <>
         {mode === 'login' &&
-         <Form.Control type="text" placeholder="Enter login name" />
+         <Form.Control type="text" placeholder="Login" />
             }
         {mode === 'password' &&
-            <Form.Control type="password" placeholder="Enter password" />
+            <Form.Control type="password" placeholder="Password" />
         }
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
