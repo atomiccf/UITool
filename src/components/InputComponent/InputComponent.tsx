@@ -26,7 +26,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
              <Form.Control type="text" placeholder="Find in Settings" className="mr-sm-2" />
         }
         {mode === 'text' &&
-            <Form.Group controlId={id} as={Row} className="mb-3" >
+            <Form.Group controlId={id} as={Col} className="mb-3" >
             <Form.Label column sm="2">{labelText}</Form.Label>
             <Form.Control type="text" />
             </Form.Group>
