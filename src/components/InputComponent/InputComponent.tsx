@@ -6,11 +6,11 @@ import {useId} from "react";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder}) => {
     const id = useId()
-    const handleOnFocus = (e) => {
-        console.log(e.target.type)
+    const handleOnFocus = (EO: React.FocusEvent<HTMLInputElement>) => {
+        EO.target.type= 'date'
     }
-    const handleOnBlur = (e) => {
-      e.target.type= 'text'
+    const handleOnBlur = (EO: React.FocusEvent<HTMLInputElement>) => {
+      EO.target.type= 'text'
     }
 
     return(
