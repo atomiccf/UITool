@@ -24,13 +24,13 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
             <Form.Label column sm="2">Email</Form.Label>
-                <Col sm="10">
+             <Col sm="10">
             <Form.Control type="email" placeholder="Enter email" />
-                </Col>
+            </Col>
             </Form.Group>
         }
         {mode === 'search' &&
-             <Form.Control type="text" placeholder={placeHolder} className="mr-sm-2" />
+            <Form.Control type="text" placeholder={placeHolder} className="mr-sm-2" />
         }
         {mode === 'text' &&
             <Form.Group controlId={id} as={Col} className="mb-3" >
@@ -39,11 +39,11 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-             <>
-                 <Form.Label column sm="2">{labelText}</Form.Label>
-                 <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
-             </>
-                         }
+            <Form.Group controlId={id} as={Col} className="mb-3" >
+            <Form.Label column sm="2">{labelText}</Form.Label>
+            <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+            </Form.Group>
+            }
         </>
 
     )
