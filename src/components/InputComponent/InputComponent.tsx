@@ -6,14 +6,7 @@ import {useId} from "react";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder}) => {
     const id = useId()
-    const ref = useRef();
-
-    const handleFocus = (e) => {
-        e.currentTarget.type = 'text'
-    }
-    const handleBlur = (e) => {
-        e.currentTarget.type = 'date'
-    }
+    const ref = useRef<HTMLInputElement>();
 
     return(
         <>
@@ -41,7 +34,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-                <Form.Control type="date"  placeholder={placeHolder} onFocus={handleFocus} onBlur={handleBlur}/>
+                <Form.Control type="date"  ref={ref} placeholder={placeHolder} onFocus={() => (ref!.current.type = "date")} onBlur={() => (ref.current.type = "text")}/>
             }
         </>
 
