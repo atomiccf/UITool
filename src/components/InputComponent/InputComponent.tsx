@@ -39,7 +39,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-                <Form.Control type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+                <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
             }
         </>
 
