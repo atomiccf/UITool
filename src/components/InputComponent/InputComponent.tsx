@@ -9,6 +9,9 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
     const handleOnFocus = (e) => {
         console.log(e.target.type)
     }
+    const handleOnBlur = (e) => {
+      e.target.type= 'text'
+    }
 
     return(
         <>
@@ -36,7 +39,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-                <Form.Control type="date" onFocus={handleOnFocus} />
+                <Form.Control type="date" onFocus={handleOnFocus} onBlur={handleOnBlur} />
             }
         </>
 
