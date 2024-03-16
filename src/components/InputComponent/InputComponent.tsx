@@ -4,7 +4,7 @@ import {InputComponentProps} from "./InputComponent.types";
 import {Col, Row} from "react-bootstrap";
 import {useId} from "react";
 
-export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) => {
+export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder}) => {
     const id = useId()
     return(
         <>
@@ -28,8 +28,11 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText}) 
         {mode === 'text' &&
             <Form.Group controlId={id} as={Col} className="mb-3" >
             <Form.Label column sm="2">{labelText}</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" placeholder={placeHolder} />
             </Form.Group>
+            }
+            {mode === 'date' &&
+                <Form.Control type="date" />
             }
         </>
 
