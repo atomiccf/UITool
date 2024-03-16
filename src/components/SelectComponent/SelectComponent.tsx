@@ -17,7 +17,6 @@ export const SelectComponent:React.FC<SelectComponentProps> = ({data, handleChan
                 {data.map((item) => (<option key={item} value={item}>{item}</option>))}
             </Form.Select>
         </>
-
     }
     </>
 
