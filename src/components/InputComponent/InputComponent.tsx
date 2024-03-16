@@ -16,8 +16,8 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
     return(
         <>
         {mode === 'login' &&
-         <Form.Control type="text" placeholder="Login" />
-            }
+             <Form.Control type="text" placeholder="Login" />
+        }
         {mode === 'password' &&
             <Form.Control type="password" placeholder="Password" />
         }
@@ -39,7 +39,10 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-                <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+             <Form.Group controlId={id} as={Col} className="mb-3" >
+             <Form.Label column sm="2">{labelText}</Form.Label>
+             <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+             </Form.Group>
             }
         </>
 
