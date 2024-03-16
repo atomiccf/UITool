@@ -39,11 +39,11 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-             <Form.Group controlId={id} as={Col} className="mb-3" >
-             <Form.Label column sm="2">{labelText}</Form.Label>
-             <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
-             </Form.Group>
-            }
+             <>
+                 <Form.Label column sm="2">{labelText}</Form.Label>
+                 <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+             </>
+                         }
         </>
 
     )
