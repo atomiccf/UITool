@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React from "react";
 import Form from 'react-bootstrap/Form';
 import {InputComponentProps} from "./InputComponent.types";
 import {Col, Row} from "react-bootstrap";
@@ -6,7 +6,9 @@ import {useId} from "react";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder}) => {
     const id = useId()
-    const ref = useRef<HTMLInputElement>();
+    const handleOnFocus = (e) => {
+        console.log(e.target.type)
+    }
 
     return(
         <>
@@ -34,7 +36,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             </Form.Group>
             }
             {mode === 'date' &&
-                <Form.Control type="date"  ref={ref} placeholder={placeHolder} onFocus={() => (ref!.current.type = "date")} onBlur={() => (ref.current.type = "text")}/>
+                <Form.Control type="date" onFocus={handleOnFocus} />
             }
         </>
 
