@@ -8,8 +8,12 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
     const id = useId()
     const [inputType, setInputType] = useState<string>('text');
 
-    const handleFocus = () => setInputType('date');
-    const handleBlur = () => setInputType('text');
+    const handleFocus = () => {
+        console.log(inputType)
+        setInputType('date')};
+    const handleBlur = () => {
+        console.log(inputType)
+        setInputType('text')};
 
     return(
         <>
