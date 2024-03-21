@@ -4,7 +4,7 @@ import {DropDownCheckProps} from "./DropDownCheckBox.types";
 
 export const DropDownCheckBox: React.FC<DropDownCheckProps> = ({dropdownName,dropdownList}) => {
     const [checkedItems, setCheckedItems] = useState({});
-    const handleCheckChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleCheckChange = (event) => {
         setCheckedItems({...checkedItems, [event.target.name]: event.target.checked});
     };
     return (
