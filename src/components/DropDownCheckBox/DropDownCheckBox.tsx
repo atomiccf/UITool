@@ -16,7 +16,7 @@ export const DropDownCheckBox: React.FC<DropDownCheckProps> = ({dropdownName,dro
                         id={`checkbox-${index}`}
                         label={item}
                         name={item}
-                        checked={!!dropdownList[item]}
+                        checked={!dropdownList[item]}
                         onChange={handleCheckChange}
                     />
             ))}
