@@ -7,12 +7,11 @@ export const DropDownCheckBox: React.FC<DropDownCheckProps> = ({dropdownName,dro
     const handleCheckChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCheckedItems({...checkedItems, [event.target.name]: event.target.checked});
     };
-    // @ts-ignore
     return (
         <DropdownButton id="dropdown-basic-button" title={dropdownName}>
             {dropdownList.map((item, index) => (
-                <Dropdown.Item key={index}>
                     <Form.Check
+                        key={index}
                         type="checkbox"
                         id={`checkbox-${index}`}
                         label={item}
@@ -20,7 +19,6 @@ export const DropDownCheckBox: React.FC<DropDownCheckProps> = ({dropdownName,dro
                         checked={!!dropdownList[item]}
                         onChange={handleCheckChange}
                     />
-                </Dropdown.Item>
             ))}
         </DropdownButton>
     )
