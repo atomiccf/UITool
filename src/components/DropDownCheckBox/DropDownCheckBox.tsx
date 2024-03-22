@@ -9,10 +9,10 @@ export const DropDownCheckBox: React.FC<DropDownCheckProps> = ({dropdownName,dro
     };
     // @ts-ignore
     return (
-        <DropdownButton  id="dropdown-basic-button" title={dropdownName}>
+        <DropdownButton className='p-2'  id="dropdown-basic-button" title={dropdownName}>
             {dropdownList.map((item, index) => (
                     <Form.Check
-                        className='pr-sm-4'
+                        className='pr-sm-4 m-2'
                         key={index}
                         type="checkbox"
                         id={`checkbox-${index}`}
