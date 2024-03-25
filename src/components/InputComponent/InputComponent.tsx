@@ -25,7 +25,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
         }
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
-            <Form.Label column sm="2">Email</Form.Label>
+            <Form.Label column sm="2">{labelText}</Form.Label>
              <Col sm="10">
             <Form.Control type="email" onChange={handleChange} placeholder={placeHolder} />
             </Col>
@@ -45,7 +45,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             {mode === 'date' &&
             <Form.Group controlId={id} as={Col} className="mb-3" >
             <Form.Label column sm="2">{labelText}</Form.Label>
-            <Form.Control placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
+            <Form.Control onChange={handleChange} placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
             </Form.Group>
             }
         </>
