@@ -36,7 +36,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
         <>
             <Form.Group controlId={id} as={Row} className="mb-3" >
                 <Form.Label column sm="2">{labelText}</Form.Label>
-                <Form.Control type="text" placeholder={placeHolder} />
+                <Form.Control onChange={handleChange} type="text" placeholder={placeHolder} />
             </Form.Group>
         </>
                        }
