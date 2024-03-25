@@ -4,7 +4,7 @@ import {InputComponentProps} from "./InputComponent.types";
 import {Col, Row} from "react-bootstrap";
 import {useId} from "react";
 
-export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder}) => {
+export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder,handleChange}) => {
     const id = useId()
     const handleOnFocus = (EO: React.FocusEvent<HTMLInputElement>) => {
         EO.target.type= 'date'
@@ -16,26 +16,28 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
     return(
         <>
         {mode === 'login' &&
-             <Form.Control type="text" placeholder="Login" />
+             <Form.Control onChange={handleChange} type="text" placeholder="Login" />
         }
         {mode === 'password' &&
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Group as={Row} className="mb-3" controlId="email">
+            <Form.Control onChange={handleChange} type="password" placeholder="Password" />
+            </Form.Group>
         }
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
             <Form.Label column sm="2">Email</Form.Label>
              <Col sm="10">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" onChange={handleChange} placeholder="Enter email" />
             </Col>
             </Form.Group>
         }
         {mode === 'search' &&
-            <Form.Control type="text" placeholder={placeHolder} className="mr-sm-2" />
+            <Form.Control type="text" onChange={handleChange} placeholder={placeHolder} className="mr-sm-2" />
         }
         {mode === 'text' &&
             <Form.Group controlId={id} as={Col} className="mb-3" >
             <Form.Label column sm="2">{labelText}</Form.Label>
-            <Form.Control type="text" placeholder={placeHolder} />
+            <Form.Control type="text" onChange={handleChange} placeholder={placeHolder} />
             </Form.Group>
             }
             {mode === 'date' &&
