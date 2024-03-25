@@ -27,7 +27,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
             <Form.Group as={Row} className="mb-3" controlId="email">
             <Form.Label column sm="2">Email</Form.Label>
              <Col sm="10">
-            <Form.Control type="email" onChange={handleChange} placeholder="Enter email" />
+            <Form.Control type="email" onChange={handleChange} placeholder={placeHolder} />
             </Col>
             </Form.Group>
         }
