@@ -26,9 +26,7 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
         {mode === 'email' &&
             <Form.Group as={Row} className="mb-3" controlId="email">
             <Form.Label column sm="2">{labelText}</Form.Label>
-             <Col sm="10">
             <Form.Control type="email" onChange={handleChange} placeholder={placeHolder} />
-            </Col>
             </Form.Group>
         }
         {mode === 'search' &&
