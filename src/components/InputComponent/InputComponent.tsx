@@ -19,12 +19,12 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
              <Form.Control onChange={handleChange} type="text" placeholder="Login" />
         }
         {mode === 'password' &&
-            <Form.Group as={Row} className="mb-3" controlId="email">
+            <Form.Group className="mb-3" controlId="email">
             <Form.Control onChange={handleChange} type="password" placeholder="Password" />
             </Form.Group>
         }
         {mode === 'email' &&
-            <Form.Group as={Row} className="mb-3" controlId="email">
+            <Form.Group className="mb-3" controlId="email">
             <Form.Label column sm="2">{labelText}</Form.Label>
             <Form.Control type="email" onChange={handleChange} placeholder={placeHolder} />
             </Form.Group>
@@ -34,14 +34,14 @@ export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, p
         }
         {mode === 'text' &&
         <>
-            <Form.Group controlId={id} as={Row} className="mb-3" >
+            <Form.Group controlId={id} className="mb-3" >
                 <Form.Label column sm="2">{labelText}</Form.Label>
                 <Form.Control onChange={handleChange} type="text" placeholder={placeHolder} />
             </Form.Group>
         </>
                        }
             {mode === 'date' &&
-            <Form.Group controlId={id} as={Col} className="mb-3" >
+            <Form.Group controlId={id} className="mb-3" >
             <Form.Label column sm="2">{labelText}</Form.Label>
             <Form.Control onChange={handleChange} placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
             </Form.Group>
