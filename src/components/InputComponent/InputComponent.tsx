@@ -1,7 +1,6 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
 import {InputComponentProps} from "./InputComponent.types";
-import {Col, Row} from "react-bootstrap";
 import {useId} from "react";
 
 export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder,handleChange}) => {
