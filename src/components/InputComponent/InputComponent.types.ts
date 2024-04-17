@@ -5,4 +5,5 @@ export interface InputComponentProps {
     labelText?:string
     placeHolder?:string
     handleChange?: (EO:React.ChangeEvent<HTMLInputElement>) => void
+    required?:boolean
 }

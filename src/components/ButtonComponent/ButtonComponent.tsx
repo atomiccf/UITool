@@ -11,6 +11,6 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = ({mode,handleButt
             {mode === 'light' && <Button onClick={handleButton} variant="light">{children}</Button>}
             {mode === 'success' && <Button variant="success">{children}</Button>}
             {mode === 'danger' && <Button onClick={handleButton} variant="danger">{children}</Button>}
-            {mode === 'submit' && <Button size={size} onClick={handleSubmit} variant="primary">{children}</Button>}
+            {mode === 'submit' && <Button size={size} onClick={handleSubmit} variant="primary" type={'submit'}>{children}</Button>}
         </>)
 }
