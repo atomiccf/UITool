@@ -6,4 +6,5 @@ export interface ButtonComponentProps  {
     handleSubmit?: () => Promise<void> | void
     children?: string | React.ReactNode
     size?: "sm" | "lg" | undefined
+    type?: "submit"
 }
