@@ -1,6 +1,6 @@
 import React, {useId} from "react";
 import Form from 'react-bootstrap/Form';
-import {InputDateProps} from "./InputDate.types";
+import {InputDateProps} from "./DateInput.types";
 
 export const DateInputDate: React.FC<InputDateProps> = ({labelText,handleChange,placeHolder}) => {
     const id = useId()
