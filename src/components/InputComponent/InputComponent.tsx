@@ -3,49 +3,14 @@ import Form from 'react-bootstrap/Form';
 import {InputComponentProps} from "./InputComponent.types";
 import {useId} from "react";
 
-export const InputComponent:React.FC<InputComponentProps> = ({mode, labelText, placeHolder,handleChange}) => {
+export const InputComponent: React.FC<InputComponentProps> = ({type, labelText, placeHolder, handleChange}) => {
     const id = useId()
-    const handleOnFocus = (EO: React.FocusEvent<HTMLInputElement>) => {
-        EO.target.type= 'date'
-    }
-    const handleOnBlur = (EO: React.FocusEvent<HTMLInputElement>) => {
-      EO.target.type= 'text'
-    }
 
-    return(
-        <>
-        {mode === 'login' &&
-             <Form.Control onChange={handleChange} type="text" placeholder="Login" />
-        }
-        {mode === 'password' &&
-            <Form.Group className="mb-3" controlId="email">
-            <Form.Control onChange={handleChange} type="password" placeholder="Password" />
-            </Form.Group>
-        }
-        {mode === 'email' &&
-            <Form.Group className="mb-3" controlId="email">
+    return (
+        <Form.Group className="mb-3" controlId={id}>
             <Form.Label column sm="2">{labelText}</Form.Label>
-            <Form.Control type="email" onChange={handleChange} placeholder={placeHolder} />
-            </Form.Group>
-        }
-        {mode === 'search' &&
-            <Form.Control type="text" onChange={handleChange} placeholder={placeHolder} className="mr-sm-2" />
-        }
-        {mode === 'text' &&
-        <>
-            <Form.Group controlId={id} className="mb-3" >
-                <Form.Label column sm="2">{labelText}</Form.Label>
-                <Form.Control onChange={handleChange} type="text" placeholder={placeHolder} />
-            </Form.Group>
-        </>
-                       }
-            {mode === 'date' &&
-            <Form.Group controlId={id} className="mb-3" >
-            <Form.Label column sm="2">{labelText}</Form.Label>
-            <Form.Control onChange={handleChange} placeholder={placeHolder} type="text" onFocus={handleOnFocus} onBlur={handleOnBlur} />
-            </Form.Group>
-            }
-        </>
+            <Form.Control type={type} onChange={handleChange} placeholder={placeHolder}/>
+        </Form.Group>)
 
-    )
+
 }

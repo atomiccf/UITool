@@ -1,7 +1,7 @@
 import React from "react";
 
-export interface InputComponentProps {
-    type:"text" | "email" | "password";
+export interface InputDateProps {
+    type:"text" | "date" ;
     labelText?:string
     placeHolder?:string
     handleChange?: (EO:React.ChangeEvent<HTMLInputElement>) => void
