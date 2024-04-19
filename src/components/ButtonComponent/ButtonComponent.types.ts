@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface ButtonComponentProps  {
-    mode?: string
+    variant: "primary" | "light" | "danger"
     handleButton?: () =>  void
     handleSubmit?: () => Promise<void> | void
     children?: string | React.ReactNode
