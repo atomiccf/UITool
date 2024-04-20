@@ -8,7 +8,7 @@ export const InputComponent: React.FC<InputComponentProps> = ({type, labelText, 
 
     return (
         <Form.Group className="mb-3" controlId={id}>
-            <Form.Label column sm="2">{labelText}</Form.Label>
+            <Form.Label>{labelText}</Form.Label>
             <Form.Control type={type} onChange={handleChange} placeholder={placeHolder}/>
         </Form.Group>)
 
