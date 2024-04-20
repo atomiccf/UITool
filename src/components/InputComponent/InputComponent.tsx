@@ -7,12 +7,10 @@ export const InputComponent: React.FC<InputComponentProps> = ({type, labelText, 
     const id = useId()
 
     return (
-        <>
+        <Form.Group className="mb-3" controlId={id}>
             <Form.Label>{labelText}</Form.Label>
             <Form.Control type={type} onChange={handleChange} placeholder={placeHolder}/>
-        </>
-
-       )
+        </Form.Group>)
 
 
 }
