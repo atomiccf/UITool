@@ -7,7 +7,7 @@ export const CheckBoxComponent:React.FC<CheckBoxComponentProps> = ({labelText}) 
     return(
         <Form>
              <div  className="mb-3">
-                    <Form.Check // prettier-ignore
+                    <Form.Check
                     label={labelText}
                     />
              </div>
