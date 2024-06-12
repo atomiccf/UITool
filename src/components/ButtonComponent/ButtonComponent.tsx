@@ -10,7 +10,7 @@ export const ButtonComponent: React.FC<ButtonComponentProps> = ({
                                                                     handleButton,
                                                                     children,
                                                                     size,
-                                                                    handleSubmit
+
                                                                 }) => {
-    return <Button onClick={handleButton || handleSubmit} variant={variant} size={size} type={type}>{children}</Button>
+    return <Button onClick={handleButton } variant={variant} size={size} type={type}>{children}</Button>
 }
